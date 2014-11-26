@@ -7,13 +7,13 @@ import Log
 -- Homework 2 (LogAnalysis)
 
 -- Exercise 1
--- ex: parseMessage "E 2 562 help help" --> LogMessage (Error 2) 562 "help help"
-parseMessage :: String -> LogMessage
+-- ex: parseMessage "E 2 562 help help" - -> LogMessage (Error 2) 562 "help help"
+parseMessage :: String                    -> LogMessage
 parseMessage s = case words s of
-  ("E" : sv : t : msg) -> LogMessage (Error (read sv :: Int)) (read t :: Int) (unwords msg)
-  ("I" : t : msg)   -> LogMessage Info (read t :: Int) (unwords msg)
-  ("W" : t : msg)   -> LogMessage Warning (read t :: Int) (unwords msg)
-  m             -> Unknown (unwords m)
+  ("E" : sv : t : msg)                    -> LogMessage (Error (read sv :: Int)) (read t :: Int) (unwords msg)
+  ("I" : t : msg)                         -> LogMessage Info (read t :: Int) (unwords msg)
+  ("W" : t : msg)                         -> LogMessage Warning (read t :: Int) (unwords msg)
+  m                                       -> Unknown (unwords m)
 
 parse :: String -> [LogMessage]
 parse s = map parseMessage $ lines s
@@ -26,7 +26,7 @@ insert msg@(LogMessage _ msgTime _) (Node ltree l@(LogMessage _ treeTime _) rtre
   | msgTime <= treeTime = Node (insert msg ltree) l rtree 
   | msgTime > treeTime = Node ltree l (insert msg rtree)
 insert _ _  = error "Should never occur!"
-                          
+
 -- Exercise 3
 build :: [LogMessage] -> MessageTree
 build [] = Leaf

@@ -1,0 +1,212 @@
+
+./algebraic-data-types.hs,1286
+data Thing Thing4,5
+data Thing = ShoeShoe4,5
+           | ShipShip5,6
+           | SealingWaxSealingWax6,7
+           | CabbageCabbage7,8
+           | KingKing8,9
+shoe shoe11,12
+shoe shoe12,13
+listO'Things listO'Things14,15
+listO'Things listO'Things15,16
+isSmall isSmall18,19
+isSmall isSmall19,20
+isSmall2 isSmall226,27
+isSmall2 isSmall227,28
+data FailableDouble FailableDouble32,33
+data FailableDouble = FailureFailure32,33
+                    | OK OK33,34
+ex01 ex0136,37
+ex02 ex0237,38
+safeDiv safeDiv39,40
+safeDiv safeDiv40,41
+failureToZero failureToZero43,44
+failureToZero failureToZero44,45
+data Person Person48,49
+data Person = Person Person48,49
+brent brent51,52
+brent brent52,53
+stan stan54,55
+stan stan55,56
+getAge getAge57,58
+getAge getAge58,59
+baz baz74,75
+baz baz75,76
+checkFav checkFav77,78
+checkFav checkFav78,79
+ex03 ex0388,89
+failureToZero' failureToZero'95,96
+failureToZero' failureToZero'96,97
+data IntList IntList101,102
+data IntList = Empty Empty101,102
+data IntList = Empty | Cons Cons101,102
+intListProd intListProd104,105
+intListProd intListProd105,106
+data Tree Tree110,111
+data Tree = Leaf Leaf110,111
+          | Node Node111,112
+tree tree114,115
+tree tree115,116
+
+./homework-1.hs,416
+toDigitsRev toDigitsRev5,6
+toDigitsRev toDigitsRev6,7
+toDigits toDigits10,11
+toDigits toDigits11,12
+doubleEveryOther doubleEveryOther14,15
+doubleEveryOther doubleEveryOther15,16
+sumDigits sumDigits22,23
+sumDigits sumDigits23,24
+validate validate26,27
+validate validate27,28
+type Peg Peg31,32
+type Move Move32,33
+hanoi hanoi33,34
+hanoi hanoi34,35
+hanoi' hanoi'38,39
+hanoi' hanoi'39,40
+
+./homework-2.hs,0
+
+./intro-to-haskell.hs,1796
+x x2,3
+x x3,4
+y y7,8
+y y8,9
+i i11,12
+i i12,13
+biggestInt, smallestInt smallestInt14,15
+biggestInt,biggestInt14,15
+biggestInt biggestInt15,16
+smallestInt smallestInt16,17
+n n19,20
+n n20,21
+reallyBig reallyBig22,23
+reallyBig reallyBig23,24
+numDigits numDigits25,26
+numDigits numDigits26,27
+d1, d2 d229,30
+d1,d129,30
+d1 d130,31
+d2 d231,32
+b1, b2 b234,35
+b1,b134,35
+b1 b135,36
+b2 b236,37
+c1, c2, c3 c339,40
+c1, c2,c239,40
+c1,c139,40
+c1 c140,41
+c2 c241,42
+c3 c342,43
+s s45,46
+s s46,47
+ex01 ex0154,55
+ex02 ex0255,56
+ex03 ex0356,57
+ex04 ex0457,58
+ex05 ex0558,59
+ex06 ex0659,60
+ex07 ex0760,61
+ex08 ex0861,62
+ex09 ex0970,71
+ex10 ex1071,72
+ex11 ex1174,75
+ex12 ex1275,76
+ex13 ex1377,78
+ex14 ex1478,79
+ex15 ex1579,80
+ex16 ex1680,81
+sumtorial sumtorial85,86
+sumtorial sumtorial86,87
+hailstone hailstone90,91
+    | n `mod`mod92,93
+foo foo95,96
+foo foo96,97
+isEven isEven105,106
+isEven' isEven'111,112
+isEven' isEven'112,113
+p p115,116
+p p116,117
+sumPair sumPair118,119
+sumPair sumPair119,120
+f f124,125
+f f125,126
+ex17 ex17126,127
+nums, range, range2 range2135,136
+nums, range,range135,136
+nums,nums135,136
+nums nums136,137
+range range137,138
+range2 range2138,139
+hello1 hello1141,142
+hello1 hello1142,143
+hello2 hello2144,145
+hello2 hello2145,146
+helloSame helloSame147,148
+emptyList emptyList150,151
+ex18 ex18152,153
+ex19 ex19153,154
+ex20 ex20154,155
+ex21 ex21156,157
+hailstoneSeq hailstoneSeq161,162
+hailstoneSeq hailstoneSeq162,163
+intListLength intListLength168,169
+intListLength intListLength169,170
+sumEveryTwo sumEveryTwo172,173
+sumEveryTwo sumEveryTwo173,174
+hailstoneLen hailstoneLen180,181
+hailstoneLen hailstoneLen181,182
+
+./Log.hs,563
+module Log Log2,3
+data MessageType MessageType6,7
+data MessageType = InfoInfo6,7
+                 | WarningWarning7,8
+                 | Error Error8,9
+type TimeStamp TimeStamp11,12
+data LogMessage LogMessage13,14
+data LogMessage = LogMessage LogMessage13,14
+                | Unknown Unknown14,15
+data MessageTree MessageTree17,18
+data MessageTree = LeafLeaf17,18
+                 | Node Node18,19
+testParse testParse23,24
+testParse testParse27,28
+testWhatWentWrong testWhatWentWrong32,33
+testWhatWentWrong testWhatWentWrong36,37
+
+./LogAnalysis.hs,336
+module LogAnalysis LogAnalysis1,2
+parseMessage parseMessage10,11
+parseMessage parseMessage11,12
+parse parse17,18
+parse parse18,19
+insert insert21,22
+insert insert22,23
+build build30,31
+build build31,32
+inOrder inOrder36,37
+inOrder inOrder37,38
+whatWentWrong whatWentWrong41,42
+whatWentWrong whatWentWrong42,43
+
+./recursion-patterns.hs,440
+data IntList IntList6,7
+data IntList = Empty Empty6,7
+data IntList = Empty | Cons Cons6,7
+absAll absAll10,11
+absAll absAll11,12
+squareAll squareAll14,15
+squareAll squareAll15,16
+exampleList exampleList20,21
+addOne addOne21,22
+square square22,23
+mapIntList mapIntList24,25
+mapIntList mapIntList25,26
+ex01 ex0128,29
+ex02 ex0229,30
+ex03 ex0330,31
+keepOnlyEven keepOnlyEven34,35
+keepOnlyEven keepOnlyEven35,36
