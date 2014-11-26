@@ -25,8 +25,7 @@ insert msg Leaf = Node Leaf msg Leaf
 insert msg@(LogMessage _ msgTime _) (Node ltree l@(LogMessage _ treeTime _) rtree)
   | msgTime <= treeTime = Node (insert msg ltree) l rtree 
   | msgTime > treeTime = Node ltree l (insert msg rtree)
--- Catch all other cases (which shouldn't occur)
-insert _ _ = error "Should never occur!"
+insert _ _  = error "Should never occur!"
                           
 -- Exercise 3
 build :: [LogMessage] -> MessageTree
@@ -42,14 +41,14 @@ inOrder (Node ltree msg rtree) = inOrder ltree ++ [msg] ++ inOrder rtree
 -- Exercise 5
 whatWentWrong :: [LogMessage] -> [String]
 whatWentWrong [] = []
-whatWentWrong logs = toStrings . inOrder . build $ f logs
+whatWentWrong logs = toStrings . inOrder . build $ filterSeverity logs
   where
-    f :: [LogMessage] -> [LogMessage]
-    f [] = []
-    f (x@(LogMessage (Error sv) _ _):xs)
-      | sv > 50 = x : f xs
-      | otherwise = f xs
-    f (_ : xs) = f xs
+    filterSeverity :: [LogMessage] -> [LogMessage]
+    filterSeverity [] = []
+    filterSeverity (x@(LogMessage (Error sv) _ _):xs)
+      | sv > 50 = x : filterSeverity xs
+      | otherwise = filterSeverity xs
+    filterSeverity (_ : xs) = filterSeverity xs
     toStrings :: [LogMessage] -> [String]
     toStrings [] = []
     toStrings (LogMessage _ _ msg : xs) = msg : toStrings xs
