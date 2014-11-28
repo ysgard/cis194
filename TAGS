@@ -192,7 +192,7 @@ inOrder inOrder37,38
 whatWentWrong whatWentWrong41,42
 whatWentWrong whatWentWrong42,43
 
-./recursion-patterns.hs,440
+./recursion-patterns.hs,1153
 data IntList IntList6,7
 data IntList = Empty Empty6,7
 data IntList = Empty | Cons Cons6,7
@@ -210,3 +210,32 @@ ex02 ex0229,30
 ex03 ex0330,31
 keepOnlyEven keepOnlyEven34,35
 keepOnlyEven keepOnlyEven35,36
+data List List46,47
+data List t = E E46,47
+data List t = E | C C46,47
+lst1 lst148,49
+lst1 lst149,50
+lst2 lst251,52
+lst2 lst252,53
+lst3 lst354,55
+lst3 lst355,56
+filterList filterList58,59
+| |60,61
+mapList mapList63,64
+mapList mapList64,65
+doStuff1 doStuff190,91
+doStuff1 doStuff191,92
+doStuff2 doStuff295,96
+doStuff2 doStuff296,97
+safeHead safeHead108,109
+safeHead safeHead109,110
+data NonEmptyList NonEmptyList116,117
+data NonEmptyList a = NEL NEL116,117
+nelToList nelToList118,119
+nelToList nelToList119,120
+listToNel listToNel121,122
+listToNel listToNel122,123
+headNEL headNEL125,126
+headNEL headNEL126,127
+tailNEL tailNEL128,129
+tailNEL tailNEL129,130
