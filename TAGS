@@ -49,6 +49,10 @@ data Tree = Leaf Leaf110,111
 tree tree114,115
 tree tree115,116
 
+./Golf.hs,38
+skips skips21,22
+skips skips22,23
+
 ./homework-1.hs,416
 toDigitsRev toDigitsRev5,6
 toDigitsRev toDigitsRev6,7
