@@ -49,9 +49,46 @@ data Tree = Leaf Leaf110,111
 tree tree114,115
 tree tree115,116
 
-./Golf.hs,38
-skips skips21,22
-skips skips22,23
+./Golf.hs,492
+module Golf Golf2,3
+skips skips23,24
+skips skips24,25
+localMaxima localMaxima48,49
+localMaxima localMaxima49,50
+freqStr freqStr89,90
+freqStr freqStr90,91
+pad:pad95,96
+pad pad96,97
+rawStrings rawStrings100,101
+rawStrings rawStrings101,102
+fixStrings fixStrings104,105
+fixStrings fixStrings105,106
+wrapAndClean wrapAndClean110,111
+wrapAndClean wrapAndClean111,112
+histo histo116,117
+histo histo117,118
+histogram histogram120,121
+histogram histogram121,122
+
+./higher-order.hs,434
+gt100 gt1007,8
+gt100 gt1008,9
+greaterThan100 greaterThan10010,11
+greaterThan100 greaterThan10011,12
+greaterThan100' greaterThan100'16,17
+greaterThan100' greaterThan100'17,18
+greaterThan100'' greaterThan100''20,21
+greaterThan100'' greaterThan100''21,22
+foo foo28,29
+foo foo29,30
+myTest myTest33,34
+myTest myTest34,35
+myTest' myTest'37,38
+myTest' myTest'38,39
+f f50,51
+f f51,52
+f' f'54,55
+f' f'55,56
 
 ./homework-1.hs,416
 toDigitsRev toDigitsRev5,6
