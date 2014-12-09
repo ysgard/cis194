@@ -32,4 +32,19 @@ data Tree a = Leaf
 
                      
 foldTree :: [a] -> Tree a
-foldTree xs = foldr 
+foldTree xs = foldr (\x tree -> insertInTree x tree) Leaf xs
+
+
+insertInTree :: a -> Tree a -> Tree a
+insertInTree x Leaf = Node 0 Leaf x Leaf
+insertInTree x (Node n leftTree value rightTree)
+  | lh < rh   = Node n (insertInTree x leftTree) value rightTree
+  | lh > rh   = Node n leftTree value (insertInTree x rightTree)
+  | otherwise = Node (height + 1) leftTree value (insertInTree x rightTree)
+  where lh     = treeHeight leftTree
+        rh     = treeHeight rightTree
+        height = treeHeight (insertInTree x rightTree)
+
+treeHeight :: Tree a -> Integer
+treeHeight Leaf            = 0
+treeHeight (Node _ _ _ _ ) = 0
