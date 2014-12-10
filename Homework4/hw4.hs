@@ -30,21 +30,12 @@ data Tree a = Leaf
             | Node Integer (Tree a) a (Tree a)
             deriving (Show, Eq)
 
-                     
+-- We have certain restrictions here.  Because we are using foldr, we can't use the usual algorithm for
+-- creating a balanced bst from a sorted array because we have to parse the array one at a time (instead
+-- of dividing the array in half and passing each half recursively to the adding function).
+--
+-- Instead we need to evaluate the tree at each addition to figure out where to place the node.  
 foldTree :: [a] -> Tree a
-foldTree xs = foldr (\x tree -> insertInTree x tree) Leaf xs
 
 
-insertInTree :: a -> Tree a -> Tree a
-insertInTree x Leaf = Node 0 Leaf x Leaf
-insertInTree x (Node n leftTree value rightTree)
-  | lh < rh   = Node n (insertInTree x leftTree) value rightTree
-  | lh > rh   = Node n leftTree value (insertInTree x rightTree)
-  | otherwise = Node (height + 1) leftTree value (insertInTree x rightTree)
-  where lh     = treeHeight leftTree
-        rh     = treeHeight rightTree
-        height = treeHeight (insertInTree x rightTree)
 
-treeHeight :: Tree a -> Integer
-treeHeight Leaf            = 0
-treeHeight (Node _ _ _ _ ) = 0
