@@ -83,9 +83,10 @@ map' f = foldr ((:) . f) []
 -- generate all odd primes up to 2n + 2
 
 sieveSundaram :: Integer -> [Integer]
-sieveSundaram xs =  
+sieveSundaram n = map (\x -> 2 * x + 1) $ filter (`notElem` sieve) [1 .. n]
+  where sieve :: [Integer]
+        sieve = map (\(i,j) -> i + j + 2*i*j) $ filter (\(i,j) -> i <= j) $ cartProd [1..n] [1..n]
 
--- What the hell would we need this for?
 cartProd :: [a] -> [b] -> [(a, b)]
 cartProd xs ys = [(x, y) | x <- xs, y <- ys]
 
